@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - 'Joris'
+
 jobs:
   build:
     name: top-colleagues
