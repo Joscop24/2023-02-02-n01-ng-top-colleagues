@@ -1,1 +1,1 @@
-# ATTENTION FAIRE UN FORK ;-)
+# Ceci est un commit de courtoisie
