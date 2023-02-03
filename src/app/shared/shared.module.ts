@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { LikeHateComponent } from './components/like-hate/like-hate.component';
 import { ColleagueComponent } from './components/colleague/colleague.component';
 import { ColleagueListComponent } from './components/colleague-list/colleague-list.component';
+import { ScorePipe } from './pipes/score.pipe';
 
 @NgModule({
   declarations: [
     LikeHateComponent,
     ColleagueComponent,
-    ColleagueListComponent
+    ColleagueListComponent,
+    ScorePipe
   ],
   exports: [
     LikeHateComponent,
