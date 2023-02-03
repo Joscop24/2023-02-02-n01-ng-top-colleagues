@@ -1,5 +1,8 @@
 
 <div class="d-flex justify-content-around">
-  <button>J'aime</button>
-  <button>Je déteste</button>
+<!--  <button (click)="like()">J'aime</button>
+  <button (click)="hate()">Je déteste</button>-->
+  <button (click)="like()" [disabled]="likeButtonDisabled">J'aime</button>
+  <button (click)="hate()" [disabled]="hateButtonDisabled">Je déteste</button>
+
 </div>
