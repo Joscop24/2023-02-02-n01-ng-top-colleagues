@@ -22,12 +22,15 @@
       <h3>HISTORIQUE</h3>
     </div>
   </div>
-  <div class="col row">
+  <div *ngFor="let vote of tabVotes" class="col row mt-2">
     <div class="col row border border-dark text-center">
-      <img src="https://iili.io/Hc70A5G.png" alt="">
-      <div class="col row ms-2">
-        <h2 class="d-flex align-items-center mt-2">Pseudo </h2>
-        <p class="d-flex align-items-center">PSEUDO est deteste/ apprecie, PSEUDO a desormais un score de SCORE.</p>
+      <img src="{{vote.collegue.photo}}" alt="">
+      <div class="col row">
+        <h2 class="d-flex align-items-center mt-2">{{vote.collegue.pseudo | uppercase}} </h2>
+        <p *ngIf="vote.vote==1; then thenBlock else elseBlock" ></p>
+        <ng-template #thenBlock><p class="mx-3">{{vote.collegue.pseudo}} est detesté(e), son score est désormais de {{vote.collegue.score | score}}</p></ng-template>
+        <ng-template #elseBlock><p class="mx-3">{{vote.collegue.pseudo}} est aimé(e), son score est désormais de {{vote.collegue.score | score}}</p></ng-template>
+
         <div class="col text-end mb-2">
           <a href="#" class="btn btn-dark">Supprimer</a>
         </div>

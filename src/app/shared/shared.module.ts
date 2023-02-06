@@ -5,7 +5,7 @@ import { ColleagueComponent } from './components/colleague/colleague.component';
 import { ColleagueListComponent } from './components/colleague-list/colleague-list.component';
 import { ScorePipe } from './pipes/score.pipe';
 import { VotingHistoryComponent } from './components/voting-history/voting-history.component';
-
+import { WelcomePage } from "../pages/welcome/welcome.page";
 
 @NgModule({
   declarations: [
@@ -13,13 +13,15 @@ import { VotingHistoryComponent } from './components/voting-history/voting-histo
     ColleagueComponent,
     ColleagueListComponent,
     ScorePipe,
-    VotingHistoryComponent
+    VotingHistoryComponent,
+    WelcomePage
   ],
   exports: [
     LikeHateComponent,
     ColleagueComponent,
     ColleagueListComponent,
-    VotingHistoryComponent
+    VotingHistoryComponent,
+    WelcomePage
   ],
   imports: [
     CommonModule

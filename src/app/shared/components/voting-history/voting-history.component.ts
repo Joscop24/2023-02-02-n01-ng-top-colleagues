@@ -12,27 +12,27 @@ export class VotingHistoryComponent {
   laure:Colleague = {
     pseudo: "lolo",
     score: 200,
-    photo: "women/64"
+    photo: "https://randomuser.me/api/portraits/women/64.jpg"
   }
   lucas:Colleague = {
     pseudo: "lukreator",
     score: -940,
-    photo: "men/32"
+    photo: "https://randomuser.me/api/portraits/men/32.jpg"
   }
   eli:Colleague = {
     pseudo: "strifey",
     score: 900,
-    photo: "men/2"
+    photo: "https://randomuser.me/api/portraits/men/2.jpg"
   }
   joris:Colleague = {
     pseudo: "Jojo",
     score: 2,
-    photo: "men/18"
+    photo: "https://randomuser.me/api/portraits/men/18.jpg"
   }
   antoine:Colleague = {
     pseudo: "TavTav",
     score: 651,
-    photo: "men/29"
+    photo: "https://randomuser.me/api/portraits/men/29.jpg"
   }
 
 
