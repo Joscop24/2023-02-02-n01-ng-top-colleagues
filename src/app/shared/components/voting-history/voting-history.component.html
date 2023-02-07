@@ -23,7 +23,7 @@
     </div>
   </div>
   <div *ngFor="let vote of tabVotes" class="col row mt-2">
-    <div class="col row border border-dark text-center">
+    <div class="col row border rounded-2 border-dark text-center shadow-lg">
       <img src="{{vote.collegue.photo}}" alt="">
       <div class="col row">
         <h2 class="d-flex align-items-center mt-2">{{vote.collegue.pseudo | uppercase}} </h2>

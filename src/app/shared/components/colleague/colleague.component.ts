@@ -21,13 +21,14 @@ export class ColleagueComponent implements OnInit {
     likeButtonDisabled = false;
     hateButtonDisabled = false;
 
+
   updateScore(likeHate: LikeHate){
     switch (likeHate){
       case LikeHate.LIKE:
-        this.collegue.score ++;
+        this.collegue.score+=100;
         break;
       case LikeHate.HATE:
-        this.collegue.score --;
+        this.collegue.score-=100;
     }
     this.likeHateDisableling();
   }
