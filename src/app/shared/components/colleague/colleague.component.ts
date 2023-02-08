@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Colleague} from "../../../models/colleague";
 import {LikeHate} from "../../../models/like-hate";
+import {VoteService} from "../../../providers/vote.service";
 
 
 @Component({
@@ -22,13 +23,18 @@ export class ColleagueComponent implements OnInit {
     hateButtonDisabled = false;
 
 
+    constructor(private voteSrv:VoteService) {
+    }
+
   updateScore(likeHate: LikeHate){
     switch (likeHate){
       case LikeHate.LIKE:
         this.collegue.score+=100;
+        this.voteSrv.postVoteLike(this.collegue.pseudo);
         break;
       case LikeHate.HATE:
         this.collegue.score-=100;
+        this.voteSrv.postVoteHate(this.collegue.pseudo);
     }
     this.likeHateDisableling();
   }

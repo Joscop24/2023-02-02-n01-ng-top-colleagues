@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import {Colleague} from "../../../models/colleague";
 import {Vote} from "../../../models/vote";
-import {LikeHate} from "../../../models/like-hate";
 import {VoteService} from "../../../providers/vote.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'tc-voting-history',
@@ -14,6 +13,6 @@ export class VotingHistoryComponent {
   constructor(private voteService: VoteService) {
   }
 
-  votes: Vote[] = this.voteService.list();
+  votes: Observable<Vote[]> = this.voteService.list();
 
 }

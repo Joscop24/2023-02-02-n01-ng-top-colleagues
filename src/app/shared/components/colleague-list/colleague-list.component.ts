@@ -13,7 +13,7 @@ export class ColleagueListComponent implements OnInit{
 
 
   constructor(private colleguesSrv:ColleagueService) {
-    this.colleguesSrv.callApi().subscribe(tabcoll => this.collegues = tabcoll);
+    this.colleguesSrv.changeColleagues().subscribe(tabcoll => this.collegues = tabcoll);
   }
 
 
