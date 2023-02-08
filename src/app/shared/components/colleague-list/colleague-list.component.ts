@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Colleague} from "../../../models/colleague";
 import {ColleagueService} from "../../../providers/colleague.service";
 
@@ -9,13 +9,12 @@ import {ColleagueService} from "../../../providers/colleague.service";
 })
 export class ColleagueListComponent implements OnInit{
 
+  collegues: Colleague[] = [];
+
+
   constructor(private colleguesSrv:ColleagueService) {
+    this.colleguesSrv.callApi().subscribe(tabcoll => this.collegues = tabcoll);
   }
-
-  collegues: Colleague[] = this.colleguesSrv.list();
-
-
-
 
 
   ngOnInit(): void {

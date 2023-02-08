@@ -6,6 +6,7 @@ import { ColleagueListComponent } from './components/colleague-list/colleague-li
 import { ScorePipe } from './pipes/score.pipe';
 import { VotingHistoryComponent } from './components/voting-history/voting-history.component';
 import { CounterComponent } from './components/counter/counter.component';
+import { HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { CounterComponent } from './components/counter/counter.component';
     ColleagueListComponent,
     ScorePipe,
     VotingHistoryComponent,
-    CounterComponent
+    CounterComponent,
   ],
   exports: [
     LikeHateComponent,
@@ -24,7 +25,8 @@ import { CounterComponent } from './components/counter/counter.component';
     CounterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ]
 })
 export class SharedModule { }
